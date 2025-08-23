@@ -1,7 +1,6 @@
-version: "3.7"
-
 services:
     sistema_gestao:
+        container_name: sistema-getao
         build:
             context: .
             dockerfile: Dockerfile
