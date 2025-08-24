@@ -1,6 +1,6 @@
 services:
     sistema_gestao:
-        container_name: sistema-getao
+        container_name: sistema-gestao
         build:
             context: .
             dockerfile: Dockerfile
