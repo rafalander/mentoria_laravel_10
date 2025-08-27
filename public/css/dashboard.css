@@ -7,16 +7,23 @@
 /*
  * Sidebar
  */
+.sidebar {
+  position: fixed;                 /* fixa na tela */
+  top: relative;                        /* começa abaixo da navbar */
+  left: 0;                          /* grudada à esquerda */
+  width: 250px;                      /* largura da sidebar */
+  height: calc(100vh - 56px);       /* ocupa a tela toda abaixo da navbar */
+  background-color: #f8f9fa;        /* fundo */
+  border-right: 1px solid #ddd; 
+  padding-top: 0;                   /* sem padding extra, já consideramos top */
+  overflow-y: auto;                 /* rolagem se passar do tamanho */
+  z-index: 1000;                     /* garante que fique acima do conteúdo */
+}
 
-@media (min-width: 768px) {
-  .sidebar .offcanvas-lg {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 48px;
-  }
-  .navbar-search {
-    display: block;
-  }
+/* Ajusta o conteúdo principal para não ficar atrás da sidebar */
+.content {
+  margin-left: 250px; 
+  padding: 20px;
 }
 
 .sidebar .nav-link {
